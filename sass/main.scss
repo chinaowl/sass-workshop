@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+}
+
+.content {
+  text-align: center;
+  font-family: 'Inconsolata', monospace;
+}
+
+.header {
+  background-color: #ACE6F6;
+  padding: 4em 0;
+}
+
+.header__heading {
+  font-size: 2em;
+  margin: 0 0 1em;
+}
+
+.header__subheading {
+  font-size: 1.25em;
+  line-height: 1.5em;
+}
+
+.pokemon {
+  background-color: #E4FCF9;
+  padding: 4em 0;
+}
+
+.pokemon__image {
+  //border: 5px solid white;
+  margin-bottom: 1em;
+}
+
+.pokemon__name {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.pokemon__id::before {
+  content: '#'
+}
+
+.pokemon__types {
+  text-transform: capitalize;
+}
+
+.pokemon__height::after {
+  content: ' m'
+}
+
+.pokemon__weight::after {
+  content: ' kg'
+}
+
+.adopt {
+  background-color: #ACE6F6;
+  padding: 4em 0;
+}
+
+.adopt__button {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  width: 250px;
+  padding: 1em 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #FAEE5A;
+}
+
+.adopt__blocks {
+  display: flex;
+  justify-content: center;
+}
+
+.adopt__block {
+  width: 500px;
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+.testimonials {
+  background-color: #E4FCF9;
+  padding: 4em 0;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial {
+  width: 300px;
+}
+
+.testimonial__blurb {
+  padding: 0 1em;
+}
+
+.footer {
+  background-color: #ACE6F6;
+  padding: 4em 0;
+}
+
+.footer__text {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 0.75em;
+}

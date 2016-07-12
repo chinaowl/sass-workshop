@@ -3,14 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Adopt a Pokémon</title>
 
-  <title>Sass Workshop</title>
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
   <link rel="stylesheet" href="css/main.css">
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/knockout/build/output/knockout-latest.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-  <div>
-    hello I need an idea
+  <div class="content" style="display: none" data-bind="visible: true">
+    <header class="header">
+      <h1 class="header__heading">Adopt a Pokémon</h1>
+      <div class="header__subheading">
+        Professor Willow has too many Pokémon on his hands.<br>Adopt one today!
+      </div>
+    </header>
+    <div class="pokemon">
+      <img class="pokemon__image" data-bind="attr: { src: pokemon.imageUrl, alt: pokemon.name }">
+      <div class="pokemon__id" data-bind="text: pokemon.id"></div>
+      <div class="pokemon__name" data-bind="text: pokemon.name"></div>
+      <div class="pokemon__types">Type: <span data-bind="text: pokemon.types"></span></div>
+      <div class="pokemon__height">Height: <span data-bind="text: pokemon.height"></span></div>
+      <div class="pokemon__weight">Weight: <span data-bind="text: pokemon.weight"></span></div>
+    </div>
+    <div class="adopt">
+      <button class="adopt__button">Adopt today</button>
+      <div class="adopt__blocks">
+        <div class="adopt__block">
+          <h3 class="adopt__question">Who can adopt?</h3>
+          <p class="adopt__answer">Any registered trainer can adopt a Pokémon!</p>
+        </div>
+        <div class="adopt__block">
+          <h3 class="adopt__question">How do I adopt?</h3>
+          <p class="adopt__answer">Click on the button above to begin the process or visit one of our adoption centers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials" data-bind="foreach: testimonials">
+      <div class="testimonial">
+        <img data-bind="attr: { src: imageUrl, alt: trainer }">
+        <h3><span data-bind="text: trainer"></span> adopted <span data-bind="text: pokemon"></span></h3>
+        <p class="testimonial__blurb" data-bind="text: blurb"></p>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend tempor nulla, in tincidunt neque mattis at. In porttitor pharetra euismod. I spent way too much time on this. Nullam vel porttitor ex. In eu varius est. Ut a dolor mi.</div>
+    </footer>
   </div>
 </body>
 </html>
