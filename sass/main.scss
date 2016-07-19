@@ -28,7 +28,6 @@ body {
 }
 
 .pokemon__image {
-  //border: 5px solid white;
   margin-bottom: 1em;
 }
 
@@ -37,12 +36,12 @@ body {
   text-transform: capitalize;
 }
 
-.pokemon__id::before {
-  content: '#'
+.pokemon__id {
+  font-size: 1.25em;
 }
 
-.pokemon__types {
-  text-transform: capitalize;
+.pokemon__id::before {
+  content: '#'
 }
 
 .pokemon__height::after {

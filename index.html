@@ -20,13 +20,14 @@
         Professor Willow has too many Pokémon on his hands.<br>Adopt one today!
       </div>
     </header>
-    <div class="pokemon">
+    <div class="pokemon" data-bind="visible: dataReady">
       <img class="pokemon__image" data-bind="attr: { src: pokemon.imageUrl, alt: pokemon.name }">
       <div class="pokemon__id" data-bind="text: pokemon.id"></div>
       <div class="pokemon__name" data-bind="text: pokemon.name"></div>
       <div class="pokemon__types">Type: <span data-bind="text: pokemon.types"></span></div>
       <div class="pokemon__height">Height: <span data-bind="text: pokemon.height"></span></div>
       <div class="pokemon__weight">Weight: <span data-bind="text: pokemon.weight"></span></div>
+      <div class="pokemon__likes">Likes: <span data-bind="text: pokemon.likes"></span></div>
     </div>
     <div class="adopt">
       <button class="adopt__button">Adopt today</button>
